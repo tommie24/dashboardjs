@@ -1,44 +1,38 @@
-# :DashboardJS
+# DashboardJS
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/:package_name.svg?style=flat-square)](https://npmjs.com/package/:package_name)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/:github_organization/:package_name/master.svg?style=flat-square)](https://travis-ci.org/:github_organization/:package_name)
 
-**Don't forget:**
-Replace ```:author_name``` ```:author_username``` ```:package_name``` ```:package_description``` ```:github_organization``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [package.json](package.json) files.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+DashboardJS is a Javascript/jQuery Library that handles dashboard events, async views, XHR requests and responses/notifications and form handling allow you to concentrate on your front-end app logic. This Library is suitable for building typical dashboard based applications simple or comlex.
 
 ## Install
 
-You can install the package via yarn:
+Include dashboard.js in your .html or view file
 
-```bash
-$ yarn add :package_name
+```html
+<script src="scripts/lib/dashboard.js"></script>
 ```
 
 ## Usage
+You can access the global Dashboard, Event, Global, Handlers objects. All functionality is attached to these objects.
 
 ```js
-const myPackage = require('my-package');
+var data = Dashboard.serializeFormData();
 
-myPackage.doStuff();
+Dashboard.actionAjax('route/to/your/server', data, function(response) {
+	console.log(response);
+	
+	// Do whatever you want with response
+});
 ```
-
-## Testing
-
-``` bash
-$ npm run test
-```
-
 ## Contributing
 
-Contributions are welcome, [thanks to y'all](https://github.com/appstract/laravel-blade-directives/graphs/contributors) :)
+Contributions are welcome, [Check Here](https://github.com/krecent/dashboardjs/graphs/contributors) :)
 
-## About Appstract
+## Documentation
 
-Appstract is a small team from The Netherlands. We create (open source) tools for webdevelopment and write about related subjects on [Medium](https://medium.com/appstract). You can [follow us on Twitter](https://twitter.com/teamappstract), [buy us a beer](https://www.paypal.me/teamappstract/10) or [support us on Patreon](https://www.patreon.com/appstract).
+Still working on documentation.
 
 ## License
 
